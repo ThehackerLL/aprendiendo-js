@@ -8,7 +8,7 @@ let persona = {
 console.log(persona.nombre)
 console.log(persona.edad)
 console.log(persona.ciudad)
-
+d
 let calculadora = {
     sumar: function(a,b){
         return a + b

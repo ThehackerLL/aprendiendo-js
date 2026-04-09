@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con JavaScript</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Hola mundo</h1>
+    <button id="boton">Haz click aquí</button>
+
+    <input id="campo" type="text" placeholder="Escribe tu nombre">
+    <button id="boton2">Saludar</button>
+    <p id="saludo"></p>
+    <!-- asdfjkhsdfjklkdasfjksdajfkasdjfkjdskjfasdkjfkjasdfjksdjka -->
+    <ul id="lista"></ul>
+    <input type="text" id="item" placeholder="Escribe un elemento">
+    <button id="agregar">Agregar</button>
+    <!-- dksafjaksdjflkasdjfklsdjkfjasdkfjasdkjfkjsdakfjasdkfjdksjfak -->
+    <script>
+        const titulo = document.getElementById("titulo")
+        const boton = document.getElementById("boton")
+
+        boton.addEventListener("click", function () {
+            titulo.textContent = "Cambiaste el título con JavaScript"
+        })
+        boton.addEventListener("click", function () {
+            titulo.style.color = "red"
+            titulo.style.fontSize = "50px"
+        })
+
+        const campito = document.getElementById("campo")
+        const botoncito2 = document.getElementById("boton2")
+
+        boton2.addEventListener("click", function () {
+            const nombre = campito.value // input
+            saludo.textContent = `Hola ${nombre}, bienvenido`
+        })
+
+        const lista = document.getElementById("lista") // ul
+        const item = document.getElementById("item") // input
+        const agregar = document.getElementById("agregar") // button
+
+        agregar.addEventListener("click", function () {
+            const nuevoElemento = document.createElement("li")
+            nuevoElemento.textContent = item.value
+            lista.appendChild(nuevoElemento)
+            item.value = ""
+        })
+    </script>
+
+</body>
+
+</html>
