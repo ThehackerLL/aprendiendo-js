@@ -9,6 +9,7 @@ let alumnos = [
 let aprobados = alumnos.filter(function(x){
     return x.nota >= 11 && x.asistencia === true
 })
+console.log(aprobados)
 
 aprobados.forEach(function(x){
     console.log(x.nombre + " " + x.nota)
